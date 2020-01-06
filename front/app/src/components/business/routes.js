@@ -1,6 +1,6 @@
 import Home from '../Home';
 import Scores from '../ScoresTable';
-import Board from '../Board';
+import Game from './Game';
 
 export default [
 	{
@@ -21,7 +21,7 @@ export default [
 		name: 'Game',
 		id: 'game-page',
 		path: '/game',
-		component: Board,
+		component: Game,
 		exact: true,
 	}
 ]
