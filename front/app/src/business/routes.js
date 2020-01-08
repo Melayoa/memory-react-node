@@ -1,5 +1,5 @@
-import Home from '../Home';
-import Scores from '../ScoresTable';
+import Home from '../components/Home';
+import Scores from '../components/ScoresTable';
 import Game from './Game';
 
 export default [

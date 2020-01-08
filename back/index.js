@@ -1,6 +1,5 @@
 // J'importe les routes que j'ai besoin
 const homeRouter = require('./routes/home.js');
-const homeRouter = require('./routes/sendScores.js');
 
 // Je déclare les librairies nécéssaires au fonctionnement de mon application 
 const bodyParser = require('body-parser');
@@ -33,7 +32,6 @@ app.use((req, res, next) => {
 
 // definition des routes
 app.use('/scores', homeRouter);
-app.use('/send-scores', sendScore);
 
 
 // Partie API

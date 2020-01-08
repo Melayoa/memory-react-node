@@ -1,0 +1,15 @@
+{
+  "name": "memory-front",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://wwww.github.com/Melayoa/memory-react-node"
+  },
+  "author": "Mela",
+  "license": "ISC"
+}
