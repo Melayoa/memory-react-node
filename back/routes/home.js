@@ -3,7 +3,7 @@ const connection = require('../helpers/database.js');
 const router = express.Router();
 
 router.get('/', function (req, res, next) {
-	connection.query('SELECT * FROM scores ORDER BY CAST(`score` AS UNSIGNED) DESC LIMIT 0, 8 ',
+	connection.query('SELECT * FROM scores ORDER BY CAST(`score` AS UNSIGNED) ASC LIMIT 0, 8 ',
 		function (error, results, fields) {
 			if (error) { console.log("error : ", error) }
 			else res.send(results);

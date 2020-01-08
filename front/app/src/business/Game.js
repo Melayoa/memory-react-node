@@ -1,8 +1,29 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 
 import Board from '../components/Board';
 import initializeDeck from './deck';
 import Form from '../components/Form';
+
+function useInterval(callback, delay, count, solved) {
+	const savedCallback = useRef();
+
+	// Se souvenir de la dernière fonction de rappel.
+	useEffect(() => {
+		savedCallback.current = callback;
+	});
+
+	// Configurer l’intervalle.
+	useEffect(() => {
+		function tick() {
+			savedCallback.current();
+		}
+		if (delay !== null) {
+			let id = setInterval(tick, delay);
+
+			return () => clearInterval(id);
+		}
+	}, [delay]);
+}
 
 export default function App() {
 	const [cards, setCards] = useState([])
@@ -12,13 +33,10 @@ export default function App() {
 	const [count, setCount] = useState(0);
 	const gameHasEnded = count === 120 || solved.length === 20
 
-	useEffect(() => {
-		let id = setInterval(() => {
-			setCount(count + 1);
-		}, 1000);
-		if (gameHasEnded) return clearInterval(id);
-		return () => clearInterval(id);
-	});
+	useInterval(() => {
+		if (gameHasEnded) return count
+		setCount(count + 1);
+	}, 1000, count, solved);
 
 	useEffect(() => {
 		setCards(initializeDeck())

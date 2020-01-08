@@ -2,7 +2,6 @@ import React from 'react';
 import { Button, TextField } from '@material-ui/core';
 
 import { FormWrapper, FormText, WinOrLoseBlock } from './styles';
-import { sendScores } from '../../redux/actions';
 
 export default function Form({ count, sendScores }) {
 	const [value, setValue] = React.useState('');

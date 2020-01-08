@@ -12,8 +12,8 @@ import { Button, Typography } from '@material-ui/core';
 
 export default function Scores({ getScores, scores }) {
 	useEffect(() => {
-		getScores()
-	}, []);
+		 getScores()
+	});
 
 	return (
 		<ScoresWrapper component={Paper}>
