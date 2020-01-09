@@ -1,0 +1,4 @@
+CREATE TABLE `scores` (
+  `user` varchar(20) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
+  `score` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin
