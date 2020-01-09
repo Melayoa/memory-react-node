@@ -30,7 +30,10 @@ app.use((req, res, next) => {
   next();
 });
 
-// definition des routes
+// definition de la route
+// ici la routes est /scores, les routes de ce module seront disponibles
+// sur l'url de base /scores. 
+// Cela signifie que '/' === '/scores'
 app.use('/scores', homeRouter);
 
 

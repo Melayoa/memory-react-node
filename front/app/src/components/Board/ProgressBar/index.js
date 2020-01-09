@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { TimerText, TimerValue, Timer } from './styles';
 import { CountdownCircleTimer } from 'react-countdown-circle-timer';
 
+
+//Composant progressBar
 export default class ProgressBar extends Component {
 	render() {
 		const renderTime = value => {
@@ -9,6 +11,7 @@ export default class ProgressBar extends Component {
 				return <Timer>Trop tard...</Timer>;
 			}
 			if (value <= 10) {
+				// C'est ici que l'on utilise nos composant styled (voir styles.js). 
 				return <Timer>
 					<TimerText>Viiiiite</TimerText>
 					<TimerValue>{value}</TimerValue>
@@ -25,7 +28,7 @@ export default class ProgressBar extends Component {
 				</Timer>
 			);
 		};
-
+		// On utilise  CountdownCircleTimer qui viens d'une lib et on lui passe les props pour la durée et la couleur du timer
 		return (
 			<CountdownCircleTimer
 				isPlaying

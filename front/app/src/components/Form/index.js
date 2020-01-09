@@ -1,15 +1,15 @@
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import Scores from './component';
-import { getScoresRequest, sendScores } from '../../redux/actions';
+import Form from './component';
+import { sendScores } from '../../redux/actions';
 
-const mapStateToProps = (state, ownProps) => {
-}
-
+// Container
 const mapDispatchToProps = (dispatch) => {
 	return {
+		// Rend sendScore accessible au composant Form dans les props.
+		// Quand Form va l'utiliser sendScores dispatcheras mon action { type : ..., data}
 		sendScores: bindActionCreators(sendScores, dispatch)
 	}
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Scores);
+export default connect({}, mapDispatchToProps)(Form);

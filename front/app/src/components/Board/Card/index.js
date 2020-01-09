@@ -2,7 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import back from '../../../ressources/images/logo.png';
-
+//Composant Cards 
+/* On récupère les props ici : 
+Card({
+	handleClick,
+	id,
+	type,
+	flipped,
+	solved,
+	height,
+	width,
+	disabled
+}) 
+*/
 export default function Card({
 	handleClick,
 	id,
@@ -14,6 +26,7 @@ export default function Card({
 	disabled
 }) {
 	return <div
+		// Ici on utilise du style inline, mais on aurais pu créer un composant styled comme sur les autres composants
 		style={{
 			width: 120, height: 120
 		}}

@@ -1,6 +1,4 @@
 import React, { useEffect } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
@@ -11,8 +9,9 @@ import { Button, Typography } from '@material-ui/core';
 
 
 export default function Scores({ getScores, scores }) {
+	// Au chargement de mon composant je dispatch mon action getScores
 	useEffect(() => {
-		 getScores()
+		getScores()
 	});
 
 	return (
@@ -26,6 +25,7 @@ export default function Scores({ getScores, scores }) {
 					</TableRow>
 				</TableHead>
 				<TableBody>
+					{/* J'affiche grace au map toutes les datas de scores dans mon tableau*/}
 					{scores.map(score => (
 						<TableRow key={score.user}>
 							<TableCell component="th" scope="row">

@@ -1,3 +1,4 @@
+// Définir une constante afin de la modifier a une seul endroit si besoin et permet d'éviter les fautes de frappes.
 export const GET_SCORES_REQUEST = 'GET_SCORES_REQUEST';
 export const SEND_SCORES_REQUEST = 'SEND_SCORES_REQUEST';
 export const GET_SCORES_REQUEST_SUCCESS = 'GET_SCORES_REQUEST_SUCCESS';
