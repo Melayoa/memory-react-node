@@ -30,12 +30,12 @@ export default function App() {
 			{/*On met un router en place qui permet de gérer les routes de mon app*/}
 			<Router  >
 				<AppWrapper >
-					{/* Un header qui seras fixe a chaque page 
-						Le Switch c'est celui qui permet d'afficher le composant assigné a la route que l'on veut afficher
+					{/* Un header qui sera fixe à chaque page 
+						Le Switch c'est celui qui permet d'afficher le composant assigné à la route que l'on veut afficher
 					*/}
 					<Header />
 					<Switch>
-						{/* Je parcours mon tableau de routes et pour chaque route je lui donne les props comme le composant, le path etc  */}
+						{/* Je parcours mon tableau de routes et pour chaque route je lui donne les props comme le composant, le path etc.  */}
 						{routes.map(route => {
 							const { path, name, component, id, exact } = route;
 							return (

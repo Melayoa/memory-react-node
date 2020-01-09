@@ -7,7 +7,7 @@ export default function Board({ disabled, cards, flipped, solved, handleClick })
 	return (
 		<BoardWrapper>
 			<CardWrapper>
-				{/*J'affiche toute mes cartes grâce au map en revoyant pour chacune des cartes le composant Card*/}
+				{/*J'affiche toutes mes cartes grâce au map en revoyant pour chacune des cartes le composant Card*/}
 				{cards.map((card) => (
 					<Card
 						key={card.id}

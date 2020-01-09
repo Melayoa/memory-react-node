@@ -30,7 +30,7 @@ export default function Form({ count, sendScores }) {
 
 	return (
 		<FormWrapper>
-			{/* Si le count est en dessous de 120 alors je renvois le jsx présent dans renderWinningCase sinon, celui dans renderLostCase */}
+			{/* Si le count est en dessous de 120 alors je renvoie le jsx présent dans renderWinningCase sinon, celui dans renderLostCase */}
 			{count < 120 ? renderWinningCase() : renderLostCase()}
 		</FormWrapper>
 	);

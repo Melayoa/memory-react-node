@@ -1,4 +1,4 @@
-//Je déclare la librairie mysql que je vais utiliser pour me connecter a ma base de donnée
+//Je déclare la librairie mysql que je vais utiliser pour me connecter à ma base de données
 const mysql = require('mysql');
 //J'utilise createConnection de la librairie mysql afin de définir mes paramètres de connexion
 const connection = mysql.createConnection({
@@ -9,7 +9,7 @@ const connection = mysql.createConnection({
 	password: 'root',
 	database: 'memory_db'
 });
-// Quand je me connecte je fais un log sur mon terminal pour connaître l'état de ma base de donnée
+// Quand je me connecte je fais un log sur mon terminal pour connaître l'état de ma base de données
 connection.connect((err) => {
 	if (!err) {
 		//Je suis connecté

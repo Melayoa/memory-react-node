@@ -26,7 +26,7 @@ export default function Card({
 	disabled
 }) {
 	return <div
-		// Ici on utilise du style inline, mais on aurais pu créer un composant styled comme sur les autres composants
+		// Ici on utilise du style inline, mais on aurait pu créer un composant styled comme sur les autres composants
 		style={{
 			width: 120, height: 120
 		}}

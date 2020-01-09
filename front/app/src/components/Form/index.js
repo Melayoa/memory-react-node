@@ -6,8 +6,8 @@ import { sendScores } from '../../redux/actions';
 // Container
 const mapDispatchToProps = (dispatch) => {
 	return {
-		// Rend sendScore accessible au composant Form dans les props.
-		// Quand Form va l'utiliser sendScores dispatcheras mon action { type : ..., data}
+		// Rends sendScore accessible au composant Form dans les props.
+		// Quand Form va l'utiliser sendScores dispatchera mon action { type : ..., data}
 		sendScores: bindActionCreators(sendScores, dispatch)
 	}
 }

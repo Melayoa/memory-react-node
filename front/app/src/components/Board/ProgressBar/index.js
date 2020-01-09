@@ -11,7 +11,7 @@ export default class ProgressBar extends Component {
 				return <Timer>Trop tard...</Timer>;
 			}
 			if (value <= 10) {
-				// C'est ici que l'on utilise nos composant styled (voir styles.js). 
+				// C'est ici que l'on utilise nos composants styled (voir styles.js). 
 				return <Timer>
 					<TimerText>Viiiiite</TimerText>
 					<TimerValue>{value}</TimerValue>
@@ -28,7 +28,7 @@ export default class ProgressBar extends Component {
 				</Timer>
 			);
 		};
-		// On utilise  CountdownCircleTimer qui viens d'une lib et on lui passe les props pour la durée et la couleur du timer
+		// On utilise CountdownCircleTimer qui vient d'une lib et on lui passe les props pour la durée et la couleur du timer
 		return (
 			<CountdownCircleTimer
 				isPlaying

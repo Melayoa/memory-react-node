@@ -6,7 +6,7 @@ import {
 } from "../actions";
 
 const initialState = [];
-// A l'action success je lance storeSuccess qui copie mon state actuel et y ajoute scoresTable avec la data récupérée
+// À l'action success je lance storeSuccess qui copie mon state actuel et y ajoute scoresTable avec la data récupérée
 const scoreSuccess = (state, action) => ({ ...state, scoresTable: action.data })
 
 const scoreError = (state, action) => ({ ...state, error: action.error })
@@ -18,7 +18,7 @@ const sendScoreError = (state, action) => ({ ...state, error: action.error })
 export const getScoresReducer = (state = initialState, action) => {
 
 	switch (action.type) {
-		// Après le put success de ma saga, l'action est dispatché et on arrive ici
+		// Après le put success de ma saga, l'action est dispatchée et on arrive ici
 		// Donc pour l'action ayant pour type GET_SCORES_REQUEST_SUCCESS je retourne le résultat de scoreSuccess
 		case GET_SCORES_REQUEST_SUCCESS:
 			return scoreSuccess(state, action)

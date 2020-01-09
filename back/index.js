@@ -1,16 +1,16 @@
 // J'importe les routes que j'ai besoin
 const homeRouter = require('./routes/home.js');
 
-// Je déclare les librairies nécéssaires au fonctionnement de mon application 
+// Je déclare les librairies nécessaires au fonctionnement de mon application 
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const express = require('express');
-// Je défini mon app
+// Je définis mon app
 const app = express();
 const cors = require('cors');
 
 // Je configure l'application
-// Permet d'avoir les log des erreurs du serveur
+// Permet d'avoir les logs des erreurs du serveur
 morgan('combined', {
   skip: function (req, res) { return res.statusCode < 400 }
 })
@@ -20,9 +20,9 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 //parse json
 app.use(bodyParser.json());
-//Définis les fichiers satiques dans /public
+//Définis les fichiers statiques dans /public
 app.use(express.static(__dirname + '/public'));
-//Ajout des headers que l'on accèpte
+//Ajout des headers que l'on accapte
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
@@ -30,8 +30,8 @@ app.use((req, res, next) => {
   next();
 });
 
-// definition de la route
-// ici la routes est /scores, les routes de ce module seront disponibles
+// définition de la route
+// ici la route est /scores, les routes de ce module seront disponibles
 // sur l'url de base /scores. 
 // Cela signifie que '/' === '/scores'
 app.use('/scores', homeRouter);

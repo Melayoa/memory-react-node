@@ -8,10 +8,10 @@ import { getScoresSuccess, getScoresError, GET_SCORES_REQUEST } from '../actions
 // de faire l'appel vers l'api
 function* getScoresSaga() {
 	try {
-		// call permet d'appeler getScores qui est l'appel a l'api
+		// call permet d'appeler getScores qui est l'appel à l'api
 		const { data } = yield call(getScores);
 
-		// put vas dispatcher mon action de success ou d'erreur avec la data de l'api en paramêtre
+		// put vas dispatcher mon action de success ou d'erreur avec la data de l'api en paramètre
 		yield put(getScoresSuccess(data))
 	} catch (error) {
 		yield put(getScoresError(error))
